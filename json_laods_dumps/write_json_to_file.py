@@ -19,4 +19,4 @@ for state in data['states']:
 # 3. write to a new file : modified_states.json. py will create the file if it does not exist
 # dumping the python data object into the file object f
 with open(file='../json_files/modified_state.json', mode='w')as f:
-    json.dump(data, f)
+    json.dump(data, f, indent=2)

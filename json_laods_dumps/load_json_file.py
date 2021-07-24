@@ -11,6 +11,7 @@ with open('../json_files/states.json') as f:
 print(f'type of states : {type(data)}')
 # print(states)
 
+# find a state with name Georgia
 ga = {}
 states = data['states']
 # for state in data['states'] or
