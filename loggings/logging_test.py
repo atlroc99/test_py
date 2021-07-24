@@ -8,7 +8,7 @@ import json
 # Add time, level name and the message
 
 logging.basicConfig(level=logging.DEBUG,
-                    filename='../logs/output.log',
+                    filename='../application_logs/output.log',
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
 
