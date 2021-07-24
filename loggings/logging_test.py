@@ -5,7 +5,11 @@ import json
 # filemode  Specifies the mode to open the file, if filename is specified
 #               (if filemode is unspecified, it defaults to 'a').
 
-logging.basicConfig(level=logging.DEBUG, filename='../logs/output.log')
+# Add time, level name and the message
+
+logging.basicConfig(level=logging.DEBUG,
+                    filename='../logs/output.log',
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 
 def add(x, y):
@@ -32,13 +36,13 @@ num_1 = 200
 num_2 = 5
 
 add_result = add(num_1, num_2)
-logging.debug('Add: {} + {} = {}'.format(num_1, num_2, add_result))
+logging.debug(': {} + {} = {}'.format(num_1, num_2, add_result))
 
 subtract_result = subtract(num_1, num_2)
-logging.debug('Subtract: {} - {} = {}'.format(num_1, num_2, subtract_result))
+logging.debug(': {} - {} = {}'.format(num_1, num_2, subtract_result))
 
 division_result = divide(num_1, num_2)
-logging.debug('Division: {} / {} = {}'.format(num_1, num_2, division_result))
+logging.debug(': {} / {} = {}'.format(num_1, num_2, division_result))
 
 multiplication_result = multiply(num_1, num_2)
-logging.debug('Multiplication: {} x {} = {}'.format(num_1, num_2, multiplication_result))
+logging.debug(': {} x {} = {}'.format(num_1, num_2, multiplication_result))
