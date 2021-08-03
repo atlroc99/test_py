@@ -1,5 +1,7 @@
 import logging
 import json
+import os
+from dotenv import load_dotenv
 
 # basic configuration
 # filemode  Specifies the mode to open the file, if filename is specified
@@ -7,42 +9,31 @@ import json
 
 # Add time, level name and the message
 
+
+load_dotenv()
+
+# print('from file: ', os.environ.get('log-file'))
+# log_to_file = (False, True)[os.environ.get('log-file') == 'True']
+# print('logging to file {}'.format(log_to_file))
+# output_log = None
+#
+# if log_to_file:
+#     output_log = '.. / application_logs / output.log'
+#     if not os.path.exists(output_log):
+#         open(file=output_log)
+
 logging.basicConfig(level=logging.DEBUG,
-                    filename='../application_logs/output.log',
+                    # filename=output_log,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
-
-def add(x, y):
-    """Add Function"""
-    return x + y
-
-
-def subtract(x, y):
-    """subtract Function"""
-    return x - y
+logger = logging.getLogger()
+print('os.environ.enable-logging: ', os.environ.get('enable-logging'))
+logger.disabled = (True, False)[os.environ.get('enable-logging') == 'True']  # (falseValue, trueValue)[test == True]
+print('logger.disabled', logger.disabled)
 
 
-def multiply(x, y):
-    """Multiply Function"""
-    return x * y
+def test():
+    logger.debug("test message")
 
 
-def divide(x, y):
-    """Divide Function"""
-    return x / y
-
-
-num_1 = 200
-num_2 = 5
-
-add_result = add(num_1, num_2)
-logging.debug(': {} + {} = {}'.format(num_1, num_2, add_result))
-
-subtract_result = subtract(num_1, num_2)
-logging.debug(': {} - {} = {}'.format(num_1, num_2, subtract_result))
-
-division_result = divide(num_1, num_2)
-logging.debug(': {} / {} = {}'.format(num_1, num_2, division_result))
-
-multiplication_result = multiply(num_1, num_2)
-logging.debug(': {} x {} = {}'.format(num_1, num_2, multiplication_result))
+test()
