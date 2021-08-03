@@ -1,0 +1,7 @@
+{
+  "paths": [
+    { "name": "bacnetschub"},
+    { "name": "bas/admintool"},
+    { "name": "bas/messenger"}
+  ]
+}

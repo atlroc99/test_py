@@ -1,0 +1,11 @@
+items.find(
+{
+  "repo": "docker-local-dev",
+  "name":{
+      "$match":"*"
+  },
+   "name": {
+    "$match": "SNAPSHOT_*"
+  },
+  "type": "folder"
+}).sort({"$asc" : ["created"]})

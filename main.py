@@ -1,5 +1,5 @@
 import keyword
-
+from classes.Person import Person
 
 def start_line(title):
     print(f'----| {title} |----')
@@ -128,3 +128,6 @@ print(letterSetA)
 print(letterSetB)
 diffset = letterSetA.difference(letterSetB)
 print(diffset)
+
+
+p = Person()
