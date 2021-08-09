@@ -1,0 +1,14 @@
+pip~=21.1.1
+py~=1.10.0
+python-dotenv~=0.18.0
+setuptools~=56.0.0
+MarkupSafe~=2.0.1
+Werkzeug~=2.0.1
+Jinja2~=3.0.1
+click~=8.0.1
+itsdangerous~=2.0.1
+Flask~=2.0.1
+flask-bootstrap
+flask_mail
+flask_sqlalchemy
+flask_moment
